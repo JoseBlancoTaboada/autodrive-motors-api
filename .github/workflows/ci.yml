@@ -10,12 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # Hasta que exista el proyecto Maven (issue #1) no hay nada que compilar; la caché
+      # de Maven de setup-java además falla si no encuentra un pom.xml.
       - uses: actions/setup-java@v4
+        if: hashFiles('pom.xml') != ''
         with:
           distribution: temurin
           java-version: "21"
           cache: maven
-      # Hasta que exista el proyecto Maven (issue del esqueleto) no hay nada que compilar.
       - name: Compilar y correr las pruebas
         if: hashFiles('pom.xml') != ''
         run: |
