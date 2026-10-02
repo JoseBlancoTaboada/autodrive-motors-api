@@ -1,0 +1,13 @@
+# Finales de línea normalizados (un integrante puede usar Windows y el otro no)
+* text=auto
+mvnw text eol=lf
+*.sh text eol=lf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Binarios
+*.png binary
+*.jpg binary
+*.pdf binary
+*.docx binary
+*.jar binary

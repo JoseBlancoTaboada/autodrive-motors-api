@@ -1,0 +1,32 @@
+name: Tarea
+description: Una tarea del plan de trabajo (código, documento o diagrama)
+labels: []
+body:
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: Qué tiene que quedar hecho, en una o dos líneas.
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptación
+      description: Lista de casillas que el revisor va a comprobar.
+      value: |
+        - [ ]
+    validations:
+      required: true
+  - type: input
+    id: depende
+    attributes:
+      label: Depende de
+      description: Números de issue que tienen que estar listas antes (ej. #3, #5).
+  - type: dropdown
+    id: puntos
+    attributes:
+      label: Puntos de esfuerzo
+      options: ["1", "2", "3", "5", "8"]
+    validations:
+      required: true

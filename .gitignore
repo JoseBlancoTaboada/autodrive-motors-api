@@ -1,0 +1,34 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+.factorypath
+nbproject/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+# Configuración local con secretos (contraseñas, URL de la base)
+application-local.properties
+application-local.yml
+.env
+*.env
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Material de consulta local (la especificación UML no se redistribuye)
+referencias/
+
+# Respaldos de draw.io
+*.drawio.bkp
+*.drawio.dtmp
